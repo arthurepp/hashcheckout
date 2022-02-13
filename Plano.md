@@ -10,7 +10,10 @@
     - copiar dockerfile customizado pra go que criei para pasta
 - estrutura do projeto
     - criar modulo go
-    - adicionar gin-gonic e proto (não lembro o nome agora)
+    - adicionar gin-gonic e grpc
+        - go get github.com/gin-gonic/gin
+        - go get google.golang.org/grpc
+        - go get github.com/joho/godotenv
     - criar modelos
         - ProductRequest - para receber os valores dentro do objeto CheckoutRequest
         - CheckoutRequest - para receber a requisição de checkout
