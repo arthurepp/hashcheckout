@@ -38,8 +38,11 @@
     - teste para pegar produtos e valida-los
     - implementação da lógica de produtos
 - calculo de desconto
+    - *comando utilizado para gerar o código grpc
+        - protoc --go_out=plugins=grpc:. --go_opt=paths=source_relative grpc/discount.proto
     - teste para cálculo do desconto
     - implentacao da lógica do desconto
 - calculo de blackfriday
     - teste para cálculo de produto na listagem
     - teste para verificação de produto na blackfriday
+- api e testes no docker
