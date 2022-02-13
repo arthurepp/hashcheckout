@@ -1,0 +1,9 @@
+[
+    {
+        "id": 129,
+        "title": "Test load",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+        "amount": 250,
+        "is_gift": false
+    }
+]
