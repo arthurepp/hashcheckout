@@ -1,0 +1,42 @@
+#Passos para a implementação da solução de checkout
+- infra do projeto
+    - criar repositório no github
+    - criar pasta para a aplicação
+    - copiar arquivos discont.proto e products.json para nova pasta
+    - criar docker-compose
+    - criar arquivo .env para variáveis de ambiente
+    - adicionar ao docker compose o container de calculo de desconto
+    - adicionar ao docker compose o build do container da aplicação
+    - copiar dockerfile customizado pra go que criei para pasta
+- estrutura do projeto
+    - criar modulo go
+    - adicionar gin-gonic e proto (não lembro o nome agora)
+    - criar modelos
+        - ProductRequest - para receber os valores dentro do objeto CheckoutRequest
+        - CheckoutRequest - para receber a requisição de checkout
+        - ProductEntity para receber os dados de produtos do arquivo json
+        - ProductResponse - para receber os valores calculados
+        - CheckoutRespose - para receber os produtos calculados e os totais
+    - interfaces
+        - product
+            - carregar produtos do arquivo
+            - validar os produtos da requisição
+            - criar o checkout
+        - price
+            - calcular desconto de uma lista de produtos
+        - blackfriday
+            - verifica se tem brinde quando é blackfriday
+    - criar arquivo product.go para implementar interface
+    - criar arquivo price.go para implementar interface
+    - criar arquivo blackfriday.go para implementar interface
+    - arquivo api.go com método para processar o checkout
+    - arquivo main.go instanciando os objetos necessários
+- manipulação dos produtos
+    - teste para pegar produtos e valida-los
+    - implementação da lógica de produtos
+- calculo de desconto
+    - teste para cálculo do desconto
+    - implentacao da lógica do desconto
+- calculo de blackfriday
+    - teste para cálculo de produto na listagem
+    - teste para verificação de produto na blackfriday
