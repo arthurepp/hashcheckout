@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  discount-service:
+    container_name: discountservice
+    image: hashorg/hash-mock-discount-service:latest
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - "${DISCOUNT_SERVICE_PORT}:${DISCOUNT_SERVICE_PORT}"
+  checkout_api:
+    container_name: checkoutapi
+    build:
+      context: ./api
+    ports:
+      - "${CHECKOUT_API_PORT}:${CHECKOUT_API_PORT}"
+    env_file:
+      - ./.env
