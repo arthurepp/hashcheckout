@@ -9,7 +9,7 @@ import (
 func GetEnvOrFile(key string) (envValue string) {
 	envValue = os.Getenv(key)
 	if envValue == "" {
-		currentEnv, err := godotenv.Read("../.env")
+		currentEnv, err := godotenv.Read()
 		if err != nil {
 			return ""
 		}

@@ -85,5 +85,10 @@ func LoadProducts(path string) (products []ProductEntity, err error) {
 		return
 	}
 	json.Unmarshal(b, &products)
+	for i := 0; i < len(products); i++ {
+		if products[i].IsGift {
+			products = append(products[:i], products[i+1:]...)
+		}
+	}
 	return
 }

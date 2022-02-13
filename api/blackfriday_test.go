@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 	"time"
 )
@@ -30,9 +29,6 @@ func TestIsBlackFriday(t *testing.T) {
 		TotalDiscount:           0,
 		Products:                products,
 	}
-
-	x := time.Now().Truncate(time.Hour * 24).Format("2006-01-02")
-	fmt.Println(x)
 
 	date, err := time.Parse("2006-01-02", time.Now().Truncate(time.Hour*24).Format("2006-01-02"))
 	if err != nil {

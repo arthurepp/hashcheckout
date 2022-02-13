@@ -1,4 +1,4 @@
-#Passos para a implementação da solução de checkout
+# Passos para a implementação da solução de checkout
 - infra do projeto
     - criar repositório no github
     - criar pasta para a aplicação

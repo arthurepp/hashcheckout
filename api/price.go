@@ -7,7 +7,7 @@ import (
 )
 
 type Price interface {
-	CalculateDiscount(cResponse CheckoutRespose)
+	CalculateDiscount(cResponse *CheckoutRespose)
 }
 
 type PriceService struct {

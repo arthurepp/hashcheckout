@@ -5,7 +5,7 @@ import (
 )
 
 type BlackFriday interface {
-	AddGiftOnBlackFriday(cResponse CheckoutRespose)
+	AddGiftOnBlackFriday(cResponse *CheckoutRespose)
 }
 
 type BlackFridayService struct {

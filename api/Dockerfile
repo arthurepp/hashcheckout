@@ -10,4 +10,5 @@ FROM alpine:3.15.0
 RUN apk add --no-cache ca-certificates
 WORKDIR /root/
 COPY --from=build-env /app/main .
+COPY --from=build-env /app/data ./data
 CMD ["./main"]
