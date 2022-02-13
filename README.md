@@ -5,6 +5,6 @@ Execute o comando
 ```
 docker-compose up -d
 ```
-A imagem será criada e testada. Em seguida será disponibilizada na porta 50051
+A imagem será criada e testada. Em seguida será disponibilizada na porta 50052
 Os parâmetros para configuração da aplicação estão no arquivo .env da raiz. Altera o paramentro necessário e execute o comando acima para aplicar a alteração.
 A sequência de desenvolvimento foi disponibilizada [neste arquivo](https://github.com/arthurepp/hashcheckout/blob/main/Plano.md)
